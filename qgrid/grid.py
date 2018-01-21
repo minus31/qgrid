@@ -425,7 +425,7 @@ class QgridWidget(widgets.DOMWidget):
 
         if update_columns:
             self._string_columns = list(df.select_dtypes(
-                include=[np.dtype('O')]
+                include=[np.dtype('O'), 'category']
             ).columns.values)
 
         # call map(str) for all columns identified as string columns, in
